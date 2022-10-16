@@ -1,0 +1,53 @@
+<html>
+
+<head>
+ 
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/style_2.css') }}">
+  <title>Sign in</title>
+</head>
+
+<body>
+
+  {% extends 'adminBase.html' %}
+  {% block content4 %}
+
+    <div class="hell_login">
+
+
+  <div class="main">
+  
+
+<div>
+
+    <p class="sign" align="center">Sign in</p>
+    <p style="text-align:center;">  {% with messages = get_flashed_messages() %}
+      {% if messages %}
+       {% for message in messages %}
+
+         <span style="color:red; align-text:center">{{ message }}</span>
+
+           <span aria-hidden="true">×</span>
+
+              </div>
+               {% endfor %}
+               {% endif %}
+              {% endwith %}
+             </p>
+    <form class="form1" action="" method="POST">
+
+      <input class="un " type="text" align="center" placeholder="Enter Your Email" name="email">
+      <input class="pass" type="password" align="center" placeholder="Enter YourPassword" name="password">
+      <input class="submit" type="submit" align="center" value="Sign in">
+      <p class="forgot" align="center"><a href="#">Forgot Password?</p>
+      </form> 
+  
+</div>
+</div>
+</div>
+
+{% endblock %}
+</body>
+
+</html>
